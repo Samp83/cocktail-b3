@@ -21,7 +21,7 @@ const RandomCocktails = () => {
 
   return (
       <main>
-          <button onClick={fetchCocktail}>Find a New Cocktail</button>
+          <button onClick={fetchCocktail}>Find a new random cocktail</button>
           {cocktails.map((cocktail) => (
               <div key={cocktail.idDrink}>
                   <h2>{cocktail.strDrink}</h2>
