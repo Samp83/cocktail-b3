@@ -1,11 +1,11 @@
 
 
 
-const Header = () => {
+const Header = ({userName}) => {
 
     return (
         <header>
-            <h1>Welcome to My Application</h1>
+            <h1>Welcome {userName}</h1>
         </header>
     );
 };

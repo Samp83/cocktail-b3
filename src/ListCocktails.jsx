@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CocktailCard from './CocktailCard';
 const ListCocktails = () => {
       const [cocktails, setCocktails] = useState([]);
 
@@ -17,20 +18,7 @@ const ListCocktails = () => {
       return (
         <main>
           {cocktails.slice(0, 10).map((cocktail) => (
-            <div key={cocktail.idDrink}>
-              <h2>{cocktail.strDrink}</h2>
-              <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
-              <p>{cocktail.strInstructions}</p>
-              <ul>
-                {Object.keys(cocktail)
-                  .filter(key => key.startsWith('strIngredient') && cocktail[key])
-                  .map((key, index) => (
-                    <li key={index}>
-                      {cocktail[key]} - {cocktail[`strMeasure${index + 1}`]}
-                    </li>
-                  ))}
-              </ul>
-            </div>
+            <CocktailCard cocktail={cocktail} />
           ))}
         </main>
       );

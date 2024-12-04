@@ -1,8 +1,8 @@
 
-const Footer = () => {
+const Footer = ({userName}) => {
     return (
         <footer>
-            <p>© {new Date().getFullYear()} Paris Sami</p>
+            <p>© {new Date().getFullYear()} {userName}</p>
         </footer>
     );
 }
